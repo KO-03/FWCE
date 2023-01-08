@@ -1,0 +1,25 @@
+<section class="info-box">
+    <h2>About this edition</h2>
+    <img src="{{worldCupDetail.logo}}" alt="2022 world cup logo"/>
+    <p>Host country : {{worldCupDetail.countryName}}</p>
+    <p>Attendance : {{worldCupDetail.attendance | number:'4.0-0'}} viewers</p>
+    <p>Cost : {{worldCupDetail.cost | number:'4.0-0'}} US Dollars (estimated)</p>
+    <p>Stadiums : 8 stadiums</p>
+    <p>Start date : {{worldCupDetail.startTime}}</p>
+    <p>End date : {{worldCupDetail.endTime}}</p>
+    <p>Number of particpants : {{worldCupDetail.nbParticipants}} countries</p>
+    <p>Number of matchs : {{worldCupDetail.nbMatchs}} matchs</p>
+    <p>Total goals : {{worldCupDetail.nbGoals}} goals</p>
+</section>
+
+<section class="info-box">
+  <h2>FIFA World Cup 2022</h2>
+  <p>Choose a country to explore !</p>
+  <mat-form-field appearance="outline">
+      <mat-label>Choose a country</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let c of countries" [value]="c">{{c.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</section>

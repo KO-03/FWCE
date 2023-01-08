@@ -1,0 +1,49 @@
+.app-container {
+    display: grid;
+    grid-template-areas :
+        "head aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        "map aside"
+        ;
+    height: 100vh;
+}
+    
+#header {
+    grid-area: head;
+    text-align: center;
+    background: rgb(184, 222, 254);
+}
+
+#aside {
+    grid-area: aside;
+    background: cadetblue;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-shadow: inset 8px 0px 15px #3c8486;
+}
+
+#aside h1 {
+    text-align: center;
+}
+
+#mapDiv {
+    grid-area: map;
+    background-color: beige;
+}

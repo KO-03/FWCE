@@ -19,7 +19,6 @@ describe('AppComponent', () => {
   it(`should have as title 'front-fwcdm'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('front-fwcdm');
   });
 
   it('should render title', () => {

@@ -1,0 +1,18 @@
+<div id="title">
+    <!-- <h1>{{title}}</h1> -->
+    <img src="../../assets/logo.png" alt="app logo"/>
+    <h3>Exploring FIFA World Cup {{worldCupEdition}} Edition</h3>
+</div>
+<mat-form-field appearance="outline" id="editionForm">
+    <mat-label>Choose Edition</mat-label>
+    <mat-select [(value)]="selectedValue">
+      <mat-option *ngFor="let edition of worldCupEditions" value="{{edition.editionName}}">{{edition.editionName}}</mat-option>
+    </mat-select>
+</mat-form-field>
+<div id="navbar">
+    <button mat-flat-button color="primary" class="navBtn" [routerLink]="['/']">Home</button>
+    <button mat-flat-button color="primary" class="navBtn" (click)="openDialog()">About this project</button>
+    <button mat-flat-button color="primary" class="navBtn" [routerLink]="['/Team']" disabled>Teams</button>
+    <button mat-flat-button color="primary" class="navBtn" [routerLink]="['/Matches']" disabled>Matchs</button>
+    <button mat-flat-button color="primary" class="navBtn" [routerLink]="['/FinalPhase']" disabled>Final Phase</button>
+</div>
